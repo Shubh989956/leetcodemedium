@@ -1,0 +1,9 @@
+var maxProfit = function(prices) {
+    let minValue = Infinity;
+    let profit = 0;
+    for(let num of prices){
+        minValue = Math.min(minValue, num);
+        profit = Math.max(profit, num - minValue);
+    }
+    return profit;
+};
